@@ -47,8 +47,10 @@ def main():
                 if i.strip() != ''
             ]
             records.append(Record(*record)._asdict())
-        
+
         json.dump(records, open(outpath, 'w'), indent=0)
         print("Created '%s'" % outpath)
+
 if __name__ == '__main__':
     main()
+

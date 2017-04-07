@@ -8,17 +8,26 @@ pre { font-family: monospace; }
 html, body, #cesiumContainer {
   width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
   }
+#uipanel {
+  position: fixed;
+  top: 10;
+  left: 10;
+  z-index: 1000;
+  background: white;
+  }
 </style>
 <script src="//cesiumjs.org/releases/1.32/Build/Cesium/Cesium.js"></script>
 <script src="//code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div id='cesiumContainer'>
+<div id='cesiumContainer'></div>
 
+<div id="uipanel">
+<button id="prev">&lt;&lt;</button>
+<button id="next">>></button>
+<span id='date'>(date)</span>
 </div>
-
-<div id="uipanels"></div>
 
 </body>
 <script src="birdview.js"></script>
